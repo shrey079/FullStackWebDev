@@ -16,7 +16,7 @@ console.log(myAddFunc(2,2));
 // Higher Order Functions
 function callnTimes(func,n) { 
     for(let i = 0; i < n ;i ++){ 
-        func('starboy');
+        func();
     }
 }
 callnTimes(song,3)
@@ -81,12 +81,20 @@ try{
 const myarr  = [1, 2 ,3 ,4 , 5]; 
 const myDogs = [ 
     {
-        name : "Blue" ,
+        name : "   Blue " ,
         breed : "German Sheppard"
     },
     {
-        name : "Tommy" ,
+        name : "Tommy   " ,
         breed : "Bulldog"
+    },
+    {
+        name : "Maple   " ,
+        breed : "Chihuha"
+    }, 
+    {
+        name : "                 Steve   " ,
+        breed : "Great Dane"
     }
 ];
 // For each method
@@ -95,7 +103,7 @@ myarr.forEach(function(i) {
 }); 
 
 myDogs.forEach(function(dog) { 
-    console.log(`${dog.name} is a ${dog.breed}.`)
+    console.log(`${dog.name.trim()} is a ${dog.breed}.`)
 })
 
 
@@ -122,3 +130,37 @@ const myArrSquared = myarr.map(function(i){
 myArrSquared.forEach(function(i) { 
     console.log(i);
 }); 
+
+const myDogNames = myDogs.map(function(dog){ 
+    return dog.name.toUpperCase().trim();
+})
+
+// print squared array
+myDogNames.forEach(function(i) { 
+    console.log(i);
+}); 
+
+
+// Arrow function syntax. 
+const myAdd = (x , y) => { 
+    return x + y;
+}
+
+console.log("--------")
+const myDogNames2 = myDogs.map( (dog) => { 
+    return dog.name.toLowerCase().trim();
+})
+
+
+// print squared array
+myDogNames2.forEach(function(i) { 
+    console.log(i);
+}); 
+
+
+const rollDie = () => { 
+    const i = Math.floor(Math.random() * 100) + 1; 
+    console.log(i.toString(), "is the value of the 100-sided die that you just rolled.");
+}
+
+callnTimes(rollDie,10)
