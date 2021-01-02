@@ -164,3 +164,7 @@ const rollDie = () => {
 }
 
 callnTimes(rollDie,10)
+
+
+let nums = [22, 455 ,33 ,343,43,8633 ,34, 35464, 34564, 3,4645,5456,765,678,567478,756,456,34345234523424]
+console.log("The min number is",Math.min(...nums).toString())
