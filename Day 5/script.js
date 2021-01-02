@@ -89,12 +89,36 @@ const myDogs = [
         breed : "Bulldog"
     }
 ];
-
+// For each method
 myarr.forEach(function(i) { 
-    console.log(i * i);
+    console.log(i);
 }); 
 
 myDogs.forEach(function(dog) { 
     console.log(`${dog.name} is a ${dog.breed}.`)
 })
 
+
+// map
+
+// Rememeber
+// const myarr  = [1, 2 ,3 ,4 , 5]; 
+// const myDogs = [ 
+//     {
+//         name : "Blue" ,
+//         breed : "German Sheppard"
+//     },
+//     {
+//         name : "Tommy" ,
+//         breed : "Bulldog"
+//     }
+// ];
+// Make a squared array 
+const myArrSquared = myarr.map(function(i){
+    return i * i;
+})
+
+// print squared array
+myArrSquared.forEach(function(i) { 
+    console.log(i);
+}); 
