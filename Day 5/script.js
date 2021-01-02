@@ -70,3 +70,31 @@ const myPerson2 = {
 }
 
 myPerson2.printname();
+
+// Try Catch block
+try{ 
+    doesntExist.method();
+} catch { 
+    console.log("There was an error in your code, that was caught with a try catch block.")
+}
+
+const myarr  = [1, 2 ,3 ,4 , 5]; 
+const myDogs = [ 
+    {
+        name : "Blue" ,
+        breed : "German Sheppard"
+    },
+    {
+        name : "Tommy" ,
+        breed : "Bulldog"
+    }
+];
+
+myarr.forEach(function(i) { 
+    console.log(i * i);
+}); 
+
+myDogs.forEach(function(dog) { 
+    console.log(`${dog.name} is a ${dog.breed}.`)
+})
+
