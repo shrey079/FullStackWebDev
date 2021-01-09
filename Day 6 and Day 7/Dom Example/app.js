@@ -105,3 +105,33 @@ console.dir(pSilie.children)
 // previous and next element sibling
 const secondChild = child.nextElementSibling
 console.dir(secondChild)
+
+
+// Adding new elements to the document
+const newImage = document.createElement('img');
+newImage.src = "https://lh3.googleusercontent.com/proxy/VOLosJQmdIHlzoj4DpdbDpVFW1wqfeAYuwICWLiQ7hI_ja7xGnCGyUrHYHJWIll49gk2j2ffOY5D77hSR8woAoLm5U99_Lc"
+newImage.classList.add("square")
+document.body.appendChild(newImage);
+
+// insert adjacent is a thing, just an FYI. 
+//  If you need it then just google.
+
+
+// after
+const newh2  = document.createElement("h2")
+newh2.innerText = "I am adding something here."
+const newh21  = document.createElement("h2")
+newh21.innerText = "I am adding something here."
+
+const fh1 = document.querySelector('h1')
+fh1.after(newh2)
+fh1.after(newh21)
+newh2.classList.add("purple")
+
+
+// // remove and removechild 
+const toremove = document.querySelectorAll('h2')[1]
+// toremove.remove() 
+// or you could use 
+toremove.parentElement.removeChild(toremove)
+
