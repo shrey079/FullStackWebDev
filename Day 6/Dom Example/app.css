@@ -38,3 +38,11 @@ img.square {
 .tocnumber {
     color: black;
 }
+
+.myclass {
+    color: olivedrab;
+}
+
+.myclass2 {
+    text-decoration: underline dotted pink;
+}

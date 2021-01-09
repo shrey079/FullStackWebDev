@@ -46,3 +46,47 @@ for(let sqr of allSquares){
 
 // Query selector method gives the first match for an "Element"
 document.querySelectorAll('p');
+
+//////////////////////////////////////////////////////////////
+
+// Now we loook at manipulating the actual stuff in the page
+const allLinks = document.querySelectorAll('a');
+const allPargraphs = document.querySelectorAll('p');
+
+for( let link of allLinks){ 
+    link.innerText = "Was up bro?"
+}
+
+for(let p of allPargraphs){
+    console.log("______________________________________________")
+    console.log(p.innerText);
+    console.log(p.textContent);
+    console.log(p.innerHTML);
+}
+
+// If you want to change something you need to use .innerHTML c
+const h1 = document.querySelector('h1')
+h1.innerHTML += " owned by <i>Shrey Patel</i>";
+
+// getAttribute and setAttribute methods
+const firstImage = document.querySelector("img")
+console.log(firstImage.getAttribute("src")); 
+firstImage.setAttribute("src", "https://newevolutiondesigns.com/images/freebies/cool-wallpaper-1.jpg")
+firstImage.setAttribute("alt" , "Shrey's cool image of a cat. Isn't it so cool looking")
+
+
+// we can also change the style 
+h1.style.color = "#ff4434"
+
+// We can also find the style on someting using this methof
+console.log(window.getComputedStyle(h1).color);
+
+
+// Class list example 
+const firsth2 = document.querySelector('h2')
+
+firsth2.classList.add("myclass")
+firsth2.classList.add("myclass2")
+
+
+// parents, children and s
