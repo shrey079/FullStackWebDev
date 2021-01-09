@@ -10,11 +10,11 @@ const allImages = document.getElementsByTagName("img");
 console.dir(allImages)
 
 let i = 0;
-for(image of allImages){ 
+for(let image of allImages){ 
     console.log(` `)
     console.log(`Image #${i + 1}`);
     console.log(`The height is: ${image.clientHeight} and the width is: ${image.clientWidth}`)
-    console.log(`The source of the image is ${image.currentSrc}`)
+    console.log(`The source of the image is ${image.src}`)
     console.log(` `)
     i++;
 }
@@ -34,3 +34,15 @@ console.log(`There are currently ${allDivs.length} divs on this page.`)
 //     link.style.textDecorationColor = 'magenta';
 //     link.style.textDecorationStyle = 'wavy'
 // }
+
+// SHOULD USE QUERYSELECTORALL
+
+//  document.getElementsByClassName() returns an iterable of "Elements" that have the certain class name specfied.
+const allSquares = document.getElementsByClassName('square');
+// We can change all the classes now if we wish to
+for(let sqr of allSquares){
+    sqr.src = "https://html.com/wp-content/plugins/htmlcodetutorial-plugin/assets/images/chrome-true.png"
+}
+
+// Query selector method gives the first match for an "Element"
+document.querySelectorAll('p');
