@@ -89,4 +89,19 @@ firsth2.classList.add("myclass")
 firsth2.classList.add("myclass2")
 
 
-// parents, children and s
+// parents, children and so on
+
+// parentElement
+const Silkie = document.querySelector('b')
+const pSilie = Silkie.parentElement; 
+console.log(pSilie.innerHTML);
+
+// children
+const child = pSilie.children[0]
+console.dir(child)
+
+console.dir(pSilie.children)
+
+// previous and next element sibling
+const secondChild = child.nextElementSibling
+console.dir(secondChild)
