@@ -24,7 +24,7 @@ app.get('/api/:thing', (req, res) => {
 
 app.get('/search', (req, res) => { 
     const { query } = req.query;
-    res.send(`You serached for ${query}`)
+    res.send(`You searched for ${query}`)
 })
 
 app.get('*', (req, res) => { 
