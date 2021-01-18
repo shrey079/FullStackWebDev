@@ -17,12 +17,17 @@ app.get('/cats', (req, res) => {
     res.send('You navigated to the /cat page.')
 })
 
+app.get('/api/var', (req, res) => { 
+    const { var } = req.params;
+    res.send("THIS RESOURCE DOES NOT EXIST!!")
+})
 app.get('*', (req, res) => { 
     res.send("THIS RESOURCE DOES NOT EXIST!!")
 })
 
+
 app.post("/", (req, res) => { 
-    res.send("I got your post request")
+    res.send("I got your post request.")
 })
 
 // This ensures that our app listens for req's on the correct port.
