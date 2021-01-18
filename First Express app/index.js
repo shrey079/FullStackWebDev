@@ -12,14 +12,14 @@ app.get('/', (req, res) => {
     res.send('This is the root route.')
 })
 
-// if someone request that route, then this is what we will send back. 
+// if someone request that route, then this is what we will send back 
 app.get('/cats', (req, res) => { 
     res.send('You navigated to the /cat page.')
 })
 
-app.get('/api/var', (req, res) => { 
-    const { var } = req.params;
-    res.send("THIS RESOURCE DOES NOT EXIST!!")
+app.get('/api/:thing', (req, res) => { 
+    const { i } = req.params;
+    res.send(`The var value is ${i}`);
 })
 app.get('*', (req, res) => { 
     res.send("THIS RESOURCE DOES NOT EXIST!!")
