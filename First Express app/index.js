@@ -21,6 +21,12 @@ app.get('/api/:thing', (req, res) => {
     const { i } = req.params;
     res.send(`The var value is ${i}`);
 })
+
+app.get('/search', (req, res) => { 
+    const { query } = req.query;
+    res.send(`You serached for ${query}`)
+})
+
 app.get('*', (req, res) => { 
     res.send("THIS RESOURCE DOES NOT EXIST!!")
 })
